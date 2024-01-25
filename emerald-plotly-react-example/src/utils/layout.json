@@ -1,0 +1,76 @@
+{
+  "layout": {
+    "showlegend": false,
+    "modebar": {
+      "color": "#3b3939"
+    },
+    "grid": {
+      "columns": 2,
+      "pattern": "independent",
+      "roworder": "bottom to top",
+      "rows": 2,
+      "subplots": [
+        ["xy", "x2y3"],
+        ["xy2", "x2y4"]
+      ],
+      "xgap": 0,
+      "ygap": 0.0
+    },
+    "margin": {
+      "b": 65,
+      "l": 65,
+      "r": 15,
+      "t": 20
+    },
+    "xaxis": {
+      "domain": [0, 0.74],
+      "showline": true,
+      "linewidth": 1,
+      "linecolor": "#d1d5db",
+      "mirror": "all",
+      "showspikes": true,
+      "spikemode": "across",
+      "spikesnap": "cursor",
+      "spikethickness": 1,
+      "spikedash": "solid",
+      "spikecolor": "#374151"
+    },
+    "xaxis2": {
+      "domain": [0.81, 1],
+      "showline": true,
+      "linewidth": 1,
+      "linecolor": "#d1d5db",
+      "mirror": "all"
+    },
+    "yaxis": {
+      "showline": true,
+      "linewidth": 1,
+      "linecolor": "#d1d5db",
+      "mirror": "all"
+    },
+    "yaxis2": {
+      "showline": true,
+      "linewidth": 1,
+      "linecolor": "#d1d5db",
+      "mirror": "all"
+    },
+    "yaxis3": {
+      "showline": true,
+      "linewidth": 1,
+      "linecolor": "#d1d5db",
+      "mirror": "all"
+    },
+    "yaxis4": {
+      "showline": true,
+      "linewidth": 1,
+      "linecolor": "#d1d5db",
+      "mirror": "all"
+    }
+  },
+  "traces": [
+    { "none": { "xaxis": "x", "yaxis": "y2" } },
+    { "none": { "xaxis": "x", "yaxis": "y" } },
+    { "none": { "xaxis": "x2", "yaxis": "y3" } },
+    { "none": { "xaxis": "x2", "yaxis": "y4" } }
+  ]
+}

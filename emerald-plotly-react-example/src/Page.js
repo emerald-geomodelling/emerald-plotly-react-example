@@ -19,7 +19,7 @@ function Page() {
           emerald-plotly-react-example
         </a>
       </header>
-      <main className="flex flex-wrap gap-10 mt-4 p-5 md:px-8 w-full">
+      <main className="flex flex-wrap gap-10 mt-4 p-5 md:px-8 w-full h-full">
         <PlotContainer />
       </main>
       <footer className="p-5 text-sm text-gray-500 flex mt-auto items-center gap-2">
