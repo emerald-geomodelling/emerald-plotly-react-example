@@ -3,6 +3,14 @@ import { BasePlot } from "emerald-plotly-react";
 import layout from "../utils/layout";
 import { elements } from "../utils/elements";
 
+const extraMenuItems = [
+  {
+    icon: <ion-icon name="heart-outline"></ion-icon>,
+    label: "Custom Item 1",
+    onClick: () => console.log("Custom Item 1 clicked"),
+  },
+];
+
 const PlotContainer = () => {
   const [plotLayout, setPlotLayout] = useState(layout);
 
@@ -12,14 +20,6 @@ const PlotContainer = () => {
   const setPlot = (plot) => {
     setPlotLayout(plot);
   };
-
-  const extraMenuItems = [
-    {
-      icon: <ion-icon name="heart-outline"></ion-icon>,
-      label: "Custom Item 1",
-      onClick: () => console.log("Custom Item 1 clicked"),
-    },
-  ];
 
   return (
     <div className="w-full h-full rounded-lg border border-gray-200 p-3 bg-white shadow-sm relative">
