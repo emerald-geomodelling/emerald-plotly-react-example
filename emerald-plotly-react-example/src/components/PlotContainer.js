@@ -5,7 +5,6 @@ import { elements } from "../utils/elements";
 
 const PlotContainer = () => {
   const [plotLayout, setPlotLayout] = useState(layout);
-  const [subplotZooms, setSubplotZooms] = useState();
 
   let plot = plotLayout ? JSON.parse(JSON.stringify(plotLayout)) : null;
   let context = plotLayout;
@@ -22,8 +21,6 @@ const PlotContainer = () => {
           plot={plot}
           setPlot={setPlot}
           elements={elements}
-          subplotZooms={subplotZooms}
-          setSubplotZooms={setSubplotZooms}
         />
       </div>
     </div>
