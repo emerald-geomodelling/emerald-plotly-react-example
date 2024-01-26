@@ -68,9 +68,9 @@
     }
   },
   "traces": [
-    { "none": { "xaxis": "x", "yaxis": "y2" } },
-    { "none": { "xaxis": "x", "yaxis": "y" } },
-    { "none": { "xaxis": "x2", "yaxis": "y3" } },
-    { "none": { "xaxis": "x2", "yaxis": "y4" } }
+    { "fake1": { "xaxis": "x", "yaxis": "y2" } },
+    { "fake3": { "xaxis": "x", "yaxis": "y" } },
+    { "fake2": { "xaxis": "x2", "yaxis": "y3" } },
+    { "fake2": { "xaxis": "x2", "yaxis": "y4" } }
   ]
 }

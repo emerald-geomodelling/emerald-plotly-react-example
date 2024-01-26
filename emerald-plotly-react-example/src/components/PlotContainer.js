@@ -21,6 +21,8 @@ const PlotContainer = () => {
     setPlotLayout(plot);
   };
 
+  console.log(plotLayout);
+
   return (
     <div className="w-full h-full rounded-lg border border-gray-200 p-3 bg-white shadow-sm relative">
       <div style={{ width: "100%", height: "100%" }}>
