@@ -68,9 +68,11 @@
     }
   },
   "traces": [
-    { "fake1": { "xaxis": "x", "yaxis": "y2" } },
-    { "fake3": { "xaxis": "x", "yaxis": "y" } },
-    { "fake2": { "xaxis": "x2", "yaxis": "y3" } },
-    { "fake2": { "xaxis": "x2", "yaxis": "y4" } }
+    { "Temperature": { "dataset": "model", "xaxis": "x", "yaxis": "y" } },
+    { "Temperature": { "dataset": "measurement", "xaxis": "x", "yaxis": "y" } },
+    { "Pressure": { "dataset": "model", "xaxis": "x", "yaxis": "y2" } },
+    { "Pressure": { "dataset": "measurement", "xaxis": "x", "yaxis": "y2" } },
+    { "Temperature vs pressure": { "dataset": "model", "xaxis": "x2", "yaxis": "y2" } },
+    { "none": { "xaxis": "x2", "yaxis": "y4" } }
   ]
 }

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { BasePlot } from "emerald-plotly-react";
 import layout from "../utils/layout";
-import { elements } from "../utils/elements";
+import data from "../utils/data";
+import { elements } from "../elements";
 
 const extraMenuItems = [
   {
@@ -13,23 +14,14 @@ const extraMenuItems = [
 
 const PlotContainer = () => {
   const [plotLayout, setPlotLayout] = useState(layout);
-
-  let plot = plotLayout ? JSON.parse(JSON.stringify(plotLayout)) : null;
-  let context = plotLayout;
-
-  const setPlot = (plot) => {
-    setPlotLayout(plot);
-  };
-
-  console.log(plotLayout);
-
+  
   return (
     <div className="w-full h-full rounded-lg border border-gray-200 p-3 bg-white shadow-sm relative">
       <div style={{ width: "100%", height: "100%" }}>
         <BasePlot
-          context={context}
-          plot={plot}
-          setPlot={setPlot}
+          context={data}
+          plot={structuredClone(plotLayout)}
+          setPlot={setPlotLayout}
           elements={elements}
           additionalMenuItems={extraMenuItems}
         />
