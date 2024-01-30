@@ -1,110 +1,14 @@
-export const element_temp_vs_pressure = {
-  title: (context, args) => args.dataset,
-  fn: function (context, args) {
-    const dataset = context[args.dataset];
-    return [
-      {
-        type: "scattergl",
-        x: dataset.temp,
-        y: dataset.pressure,
-      },
-    ];
-  },
-  xaxis: "centigrades",
-  yaxis: "kPa",
-  schema: (context) => {
-    return {
-      type: "object",
-      required: ["dataset"],
-      properties: {
-        dataset: {
-          type: "string",
-          enum: ["model", "measurement"],
-        },
-      },
-      additionalProperties: false,
-    };
-  }
-};
-
-export const element_temp = {
-  title: (context, args) => args.dataset,
-  fn: function (context, args) {
-    const dataset = context[args.dataset];
-    const r = dataset.radius !== undefined ? dataset.radius : dataset.x.map((x, idx) => Math.sqrt(x**2+dataset.y[idx]**2));
-    return [
-      {
-        type: "scattergl",
-        name: "temp",
-        x: r,
-        y: dataset.temp,
-        mode: args.dataset === "model" ? "lines+markers" : "markers",
-        marker: {
-          color: dataset.pressure,
-          coloraxis: "kPa",
-        },
-      },
-    ];
-  },
-  xaxis: "dist",
-  yaxis: "centigrades",
-  schema: (context) => {
-    return {
-      type: "object",
-      required: ["dataset"],
-      properties: {
-        dataset: {
-          type: "string",
-          enum: ["model", "measurement"],
-        },
-      },
-      additionalProperties: false,
-    };
-  },
-};
-
-export const element_pressure = {
-  title: (context, args) => args.dataset,
-  fn: function (context, args) {
-    const dataset = context[args.dataset];
-    const r = dataset.radius !== undefined ? dataset.radius : dataset.x.map((x, idx) => Math.sqrt(x**2+dataset.y[idx]**2));
-    return [
-      {
-        type: "scattergl",
-        name: "pressure",
-        x: r,
-        y: dataset.pressure,
-        mode: args.dataset === "model" ? "lines+markers" : "markers",
-        marker: {
-          color: dataset.temp,
-          coloraxis: "centigrades",
-        },
-      },
-    ];
-  },
-  xaxis: "dist",
-  yaxis: "kPa",
-  schema: (context) => {
-    return {
-      type: "object",
-      required: ["dataset"],
-      properties: {
-        dataset: {
-          type: "string",
-          enum: ["model", "measurement"],
-        },
-      },
-      additionalProperties: false,
-    };
-  },
-};
-
+import { element_temp_vs_pressure } from "./temp_vs_pressure";
+import { element_temp } from "./temp";
+import { element_pressure } from "./pressure";
 
 const axisTitleColor = "rgb(107 114 128)";
 const axisTitleSize = 12;
 
 export const elements = {
-  traces: { "Temperature": element_temp, "Pressure": element_pressure, "Temperature vs pressure": element_temp_vs_pressure },
+  traces: { "Temperature": element_temp,
+            "Pressure": element_pressure,
+            "Temperature vs pressure": element_temp_vs_pressure },
   xaxis: {
     dist: {
       title: {
