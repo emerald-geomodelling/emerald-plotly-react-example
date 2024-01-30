@@ -60,7 +60,7 @@ export const elements = {
   },
   coloraxis: {
     kPa: {
-      colorscale: "Portland",
+      colorscale: "Reds",
       cmin: 1,
       cmax: 10,
       colorbar: {
@@ -73,7 +73,7 @@ export const elements = {
           },
         },
         thickness: 30,
-        len: 1,
+        len: 0.6,
         x: 1.15,
         outlinewidth: 0,
         tickmode: "auto",
@@ -81,15 +81,17 @@ export const elements = {
       },
     },
     centigrades: {
+      colorscale: "Greens",
       cmin: 1,
       cmax: 40,
       colorbar: {
         x: 1.1,
         title: {
-          text: "test",
+          text: "°C",
+          longtext: "Temperature (°C)"
         },
         thickness: 30,
-        len: 0.4,
+        len: 0.6,
         outlinewidth: 0,
         tickmode: "auto",
       },
