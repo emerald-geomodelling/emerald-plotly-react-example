@@ -9,10 +9,11 @@ export const element_temp = {
         name: "temp",
         x: r,
         y: dataset.temp,
-        mode: args.dataset === "model" ? "lines+markers" : "markers",
+        mode: args.mode,
         marker: {
           color: dataset.pressure,
           coloraxis: "kPa",
+          size: args.markersize
         },
       },
     ];
@@ -28,6 +29,14 @@ export const element_temp = {
           type: "string",
           enum: ["model", "measurement"],
         },
+        mode: {
+          type: "string",
+          enum: ["lines", "lines+markers", "markers"],
+        },
+        markersize: {
+          type: "int",
+          default: 1
+        }
       },
       additionalProperties: false,
     };

@@ -68,8 +68,8 @@
     }
   },
   "traces": [
-    { "Temperature": { "dataset": "model", "xaxis": "x", "yaxis": "y" } },
-    { "Temperature": { "dataset": "measurement", "xaxis": "x", "yaxis": "y" } },
+    { "Temperature": { "dataset": "model", "mode": "lines+markers", "markersize": 10, "xaxis": "x", "yaxis": "y" } },
+    { "Temperature": { "dataset": "measurement", "mode": "markers", "markersize": 10, "xaxis": "x", "yaxis": "y" } },
     { "Pressure": { "dataset": "model", "xaxis": "x", "yaxis": "y2" } },
     { "Pressure": { "dataset": "measurement", "xaxis": "x", "yaxis": "y2" } },
     { "Temperature vs pressure": { "dataset": "model", "xaxis": "x2", "yaxis": "y3" } },
