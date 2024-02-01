@@ -2,6 +2,8 @@
 
 Example project showcasing how to use [emerald-plotly-react](https://github.com/emerald-geomodelling/emerald-plotly-react)
 
+![Screenshot](screenshot.png)
+
 ## Installing and testing locally
 
 Clone the repo,
